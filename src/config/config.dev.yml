@@ -1,0 +1,22 @@
+kafka:
+  topics:
+    topic: fraud_topic
+  server:
+    bootstrap_servers: localhost:9092
+  producer:
+    retries: 3
+    max_buffer: 10
+
+storage:
+  clickhouse:
+    host: "localhost"
+    port: 8123
+    username: "default"
+    password: ""
+    jdbc_driver: "com.clickhouse.jdbc.ClickHouseDriver"
+    native_driver: "com.clickhouse.spark.ClickHouseCatalog"
+    database: "silver_layer"
+    tables:
+      movie: "movies"
+      person: "people"
+      tv_series: "tv_series"
