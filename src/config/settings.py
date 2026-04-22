@@ -26,11 +26,6 @@ class KafkaSettings(BaseModel):
 ### Storage Settings
 
 ## Clickhouse Settings
-class ClickhouseTablesSettings(BaseModel):
-    movie: str
-    person: str
-    tv_series: str
-
 class ClickhouseSettings(BaseModel):
     host: str
     port: int
@@ -39,7 +34,7 @@ class ClickhouseSettings(BaseModel):
     database: str
     jdbc_driver: str
     native_driver: str
-    tables: ClickhouseTablesSettings
+    table: str
 
 ## MinIO Settings
 class MinioSettings(BaseModel):

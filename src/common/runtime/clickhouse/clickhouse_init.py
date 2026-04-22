@@ -16,7 +16,7 @@ def init_clickhouse():
     setup_logging()
     logger.info("Start init Clickhouse Table...")
 
-    ddl_path = Path(__file__).parent.parent.parent / "script" / "clickhouse" / "tables" / "full_init.sql"
+    ddl_path = Path(__file__).parent / "script" / "clickhouse" / "tables" / "full_init.sql"
     settings: Settings = load_settings()
     client = clickhouse_connect.get_client(
         host=settings.storage.clickhouse.host,

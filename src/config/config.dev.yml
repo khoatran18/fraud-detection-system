@@ -15,11 +15,9 @@ storage:
     password: ""
     jdbc_driver: "com.clickhouse.jdbc.ClickHouseDriver"
     native_driver: "com.clickhouse.spark.ClickHouseCatalog"
-    database: "silver_layer"
-    tables:
-      movie: "movies"
-      person: "people"
-      tv_series: "tv_series"
+    database: "predictions"
+    table: fraud_prediction
+
   delta_lake:
     minio_endpoint: "http://localhost:9000"
     minio_endpoint_sdk: "localhost:9000"
